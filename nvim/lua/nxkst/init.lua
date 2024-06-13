@@ -1,4 +1,3 @@
-require("nxkst.remap")
 require("nxkst.set")
-
-vim.cmd("language en_US")
+require("nxkst.remap")
+require("nxkst.lazy_init")

@@ -8,13 +8,4 @@ return {
 
     { "ThePrimeagen/vim-be-good" },
 
-    { "echasnovski/mini.statusline",
-    version = '*',
-    config = function()
-        require("mini.statusline").setup()
-    end
-    },
-
-    { "nvim-tree/nvim-web-devicons" },
-
 }

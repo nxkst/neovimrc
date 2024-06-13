@@ -1,12 +1,16 @@
 vim.g.mapleader = " "
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
-vim.keymap.set("n",
+
+local remap = vim.keymap.set
+
+remap("v", "J", ":m '>+1<CR>gv=gv")
+remap("v", "K", ":m '<-2<CR>gv=gv")
+remap("n", "<leader>pv", vim.cmd.Ex)
+remap("n", "<C-u>", "<C-u>zz")
+remap("n", "<C-d>", "<C-d>zz")
+remap({"n", "v"}, "<leader>y", [["+y]])
+remap({"n", "v"}, "<leader>p", [["+p]])
+remap("n",
     "<leader>ee",
     "ifn main() -> () {<CR>}<Esc>O"
 )
+remap('n', '<Esc>', '<cmd>nohlsearch<CR>')

@@ -1,4 +1,4 @@
-return {
+--[[ return {
     'nvim-mini/mini.statusline',
     dependencies = {
         "nvim-tree/nvim-web-devicons", opts = {},
@@ -11,5 +11,13 @@ return {
             use_icons = true
         })
         statusline.section_location = function() return '%2l:%-2v' end
+    end
+} ]]
+
+return {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+        require('lualine').setup()
     end
 }
